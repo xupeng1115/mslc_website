@@ -1,0 +1,22 @@
+<div id="sectionMarquee">
+    <div class="box">
+        <ul>
+            {{#each data}}
+                {{#if exist}}
+                <li class="section{{id}}" data-section="{{id}}">
+                    <p class="ico"></p>
+                    <p class="txt">{{name}}</p>
+                    <span class="arrow"></span>
+                </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    {{#if ctrl}}
+    <div class="ctrl">
+        <p class="next"><i></i></p>
+        <p class="prev"><i></i></p>
+    </div>
+    {{/if}}
+</div>
+

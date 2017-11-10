@@ -1,0 +1,61 @@
+
+<div class="m-pop-mask"></div>
+<div class="m-pop-cont clearfix">
+  <span class="close" id="processClose"></span>
+  <div class="tab" id="processTab">
+    <ul>
+      <li class="current"><span>1、实名制信息填写</span></li>
+      <li><span>2、选择您所在的城市</span></li>
+      <li><span>3、选择中意产品</span></li>
+      <li><span>4、选择您预约的支行</span></li>
+      <li><span>5、预约理财经理</span></li>
+      <li><span>6、预约成功</span></li>
+    </ul>
+  </div>
+  <div class="tabcont" id="processTabCont">
+    <ul>
+      <li class="current"><img src="static/images/process/process1.png" class="pic"><img src="static/images/process/process1-1.png" class="process1-1 process-animate1"><img src="static/images/process/process1-2.png" class="process1-2 process-animate2"></li>
+      <li><img src="static/images/process/process2.png" class="pic"><img src="static/images/process/process2-1.png" class="process2-1 process-animate1"><img src="static/images/process/process2-2.png" class="process2-2 process-animate2"></li>
+      <li><img src="static/images/process/process3.png" class="pic"><img src="static/images/process/process3-1.png" class="process3-1 process-animate1"></li>
+      <li><img src="static/images/process/process4.png" class="pic"><img src="static/images/process/process4-1.png" class="process4-1 process-animate1"><img src="static/images/process/process4-2.png" class="process4-2 process-animate2"></li>
+      <li><img src="static/images/process/process5.png" class="pic"><img src="static/images/process/process5-1.png" class="process5-1 process-animate1"><img src="static/images/process/process5-2.png" class="process5-2 process-animate2"></li>
+      <li><img src="static/images/process/process6.png" class="pic"><img src="static/images/process/process6-1.png" class="process6-1 process-animate1"></li>
+    </ul>
+    <span class="btn">下一步&gt;</span>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+  $("#processClose").click(function(){
+    $(this).parents(".m-pop-process").css({"display":"none","opacity":0});;
+  })
+
+  $("#processTab").on("click","li",function(){
+    var index = $(this).index();
+    if($(this).hasClass('current')){
+      return;
+    }
+    showProcess(index);
+  })
+
+  $("#processTabCont").on("click",".btn",function(){
+    var index = $("#processTabCont .current").index()+1;
+    showProcess(index);
+  })
+
+  function showProcess(index){
+    var processTabLi = $("#processTab li").eq(index);
+    var $processContLi = $("#processTabCont li").eq(index);
+    var $current = $("#processTabCont .current");
+    processTabLi.addClass('current').siblings().removeClass('current');
+    $current.removeClass('current');
+    $processContLi.addClass('current');
+    if(index==5){
+      $("#processTabCont .btn").hide();
+    }else{
+      $("#processTabCont .btn").show();
+    }
+  }
+
+})
+</script>

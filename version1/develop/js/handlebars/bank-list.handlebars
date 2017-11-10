@@ -1,0 +1,14 @@
+<div class="item item-marquee" id="bankListMarquee">
+    <span class="prev"></span>
+    <span class="next"></span>
+    <div class="box">
+        <ul class="clearfix">
+            {{#each data}}
+                {{#if exist}}
+                <li><a href="bank-product.html?sectionId={{sectionId}}"><img src="{{imageUrl}}" /></a></li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,87 @@
+
+<ul class="tab" id="sideRTab">
+  <li class="client">
+    <div class="ico-default"></div>
+    <div class="content">
+      <div class="box-t"></div>
+      <div class="box-m">
+        <p class="title">马上理财客户端</p>
+        <ul class="clearfix">
+          <li>
+            <p><img src="static/images/qr-code/s-qr1.png"></p>
+            <p class="txt">客户端</p>
+          </li>
+          <li>
+            <p><img src="static/images/qr-code/s-qr2.png"></p>
+            <p class="txt">经理端</p>
+          </li>
+        </ul>
+      </div>
+      <div class="box-b"></div>
+      <span class="ico-close" title="关闭"></span>
+      <span class="ico-arrow"></span>
+    </div>
+  </li>
+  <li class="weixin">
+    <div class="ico-default"></div>
+    <div class="content">
+      <div class="box-t"></div>
+      <div class="box-m">
+        <p class="title">马上理财微信客户端</p>
+        <ul class="clearfix">
+          <li>
+            <p><img src="static/images/qr-code/s-qr1.png"></p>
+            <p class="txt">关注订阅号</p>
+          </li>
+          <li>
+            <p><img src="static/images/qr-code/s-qr2.png"></p>
+            <p class="txt">关注服务号</p>
+          </li>
+        </ul>
+      </div>
+      <div class="box-b"></div>
+      <span class="ico-close" title="关闭"></span>
+      <span class="ico-arrow"></span>
+    </div>
+  </li>
+  <li class="phone">
+    <div class="ico-default"></div>
+    <div class="content">
+      <div class="box-t"></div>
+      <div class="box-m">
+        <dl>
+          <dt class="t-red">客服热线</dt>
+          <dd>400-547-4578</dd>
+        </dl>
+        <dl>
+          <dt class="t-blue">银行专线</dt>
+          <dd>400-547-4578</dd>
+        </dl>
+      </div>
+      <div class="box-b"></div>
+      <span class="ico-close" title="关闭"></span>
+      <span class="ico-arrow"></span>
+    </div>
+  </li>
+</ul>
+<script type="text/javascript">
+  $("#sideRTab").on("click",".ico-default",function(e){
+    closeSideCont();
+    $(this).next().show().addClass('current').animate({opacity:1}, 300);
+    $(document).on("click.side",closeSideCont);
+    e.stopPropagation();
+  })
+
+  $("#sideRTab").on("click",".content",function(e){
+    e.stopPropagation();
+  })
+
+  $("#sideRTab").on("click",".ico-close",closeSideCont);
+  function closeSideCont(){
+    var current = $("#sideRTab .current");
+    if(current){
+      current.hide().removeClass('current').css("opacity","0");
+    }
+    $(document).off("click.side");
+  }
+</script>

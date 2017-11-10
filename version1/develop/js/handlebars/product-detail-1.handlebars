@@ -1,0 +1,99 @@
+<div class="intro-chart" data-purchase="{{minimumPurchase}}" data-profit="{{estimatedYearRate}}" data-duration="{{duration}}" id="productIntroChart">
+  <div class="redeem-rate">
+    {{#if redeemRate}}
+    <p>每笔按起购金额补贴年化收益{{redeemRate}}%</p>
+    {{/if}}
+  </div>
+  <div class="chart">
+    <div class="chart-cont">
+      <div class="bg"></div>
+      <div class="money-ico1" id="moneyIco1"></div>
+      <div class="money-ico2" id="moneyIco2"></div>
+      <p class="money-txt money1" id="moneyTxt1"><span class="money-v">{{minimumPurchase}}万</span></p>
+      <div class="money-txt money2" id="moneyTxt2">
+        <p class="money2-d" id="moneyTxt2D">预期收益<br><span class="money-v"><span class="money-num"></span>元</span></p>
+      </div>
+      <div class="profit" id="chartProfit">
+        <p>{{profitDom estimatedYearRate}}<span class="v3">%</span></p>
+        <p>预期最高年化收益率</p>
+      </div>
+      <div class="colors" id="chartColors">
+        <p class="c4"></p>
+        <p class="c3"></p>
+        <p class="c2"></p>
+        <p class="c1"></p>
+      </div>
+    </div>
+    <div class="chart-data">
+      <ul class="clearfix">
+        <li class="d1">
+          <p class="txt1">{{startTxt type}}</p>
+          <p class="txt2">{{startDate purchaseStartDate}}</p>
+        </li>
+        <li class="d2">
+          <p class="txt1">开赚</p>
+          <p class="txt2">{{makeMoneyDate startDate "top"}}</p>
+        </li>
+        <li class="d3" id="chartD3" data-duration="{{duration}}">
+          <div class="d3-txt" id="chartD3Txt">
+            <p class="txt1">理财期限</p>
+            <p class="txt4"><span class="time-num">{{durationDom duration}}</span></p>
+          </div>
+        </li>
+        <li class="d4">
+          <p class="txt1">收钱</p>
+          <p class="txt2">{{collectMoneyDate endDate "top"}}</p>
+          <p class="txt3">{{collectTip type}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="share">
+    <ul class="clearfix">
+      <li class="ico ico2">{{viewCount}}人气</li>
+    </ul>
+  </div>
+</div>
+<div class="intro-attr" data-purchase="{{minimumPurchase}}" data-profit="{{estimatedYearRate}}" data-duration="{{duration}}" id="productIntroAttr">
+  <div class="title-bar">
+    <div class="bank-logo"><img src="{{bank.icon}}"></div>
+    <h3 class="name">{{name}}</h3>
+  </div>
+  <div class="attr">
+    <form action="">
+      <div class="info">
+        <p class="profit">预期年化收益：<span class="value1">{{twoDecimals estimatedYearRate}}%</span></p>
+        <p class="lowest-deadline">起购金额：{{minimumPurchase}}万<span class="line">|</span>理财期限：{{durationDom duration}}</p>
+      </div>
+      <div class="surplus-time clearfix">
+        {{countdownDom countDown}}
+      </div>
+      <div class="put-cont formCountProfit" data-profit="{{estimatedYearRate}}">
+        <dl class="clearfix">
+          <dt>购买金额：</dt>
+          <dd>
+            <p class="clearfix">
+              <input type="text" maxlength="11" class="txt-input moneyInput" data-defaultvalue="{{minimumPurchase}}" data-type="money" placeholder="起购金额{{minimumPurchase}}万" data-tipnoicon="2" />
+              <span class="unit">元</span>
+            </p>
+            <p class="tip"></p>
+          </dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>认购期限：</dt>
+          <dd>
+            <p class="clearfix">
+              {{durationValue duration}}
+              <span class="unit">天</span>
+            </p>
+            <p class="tip"></p>
+          </dd>
+        </dl>
+      </div>
+      <div class="btn-bar clearfix">
+        <button type="button" class="btn-submit" id="countAnimate">计算收益</button>
+      </div>
+    </form>  
+  </div>
+</div>
+

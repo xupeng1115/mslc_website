@@ -1,0 +1,106 @@
+<div class="m-pop-mask"></div>
+<div class="m-pop-cont">
+  <div class="close" id="appointmentClose"></div>
+  <div class="title">请核实并确认您的预约信息</div>
+  <div class="content">
+    <div class="form-cont">
+      <p class="form-tip">填写时请仔细核实，一旦填写，将不可修改</p>
+      <form action="" id="popAppointForm">
+        <dl class="clearfix">
+          <dt><span class="asterisk">*</span>真实姓名：</dt>
+          <dd>
+            <input type="text" name="name" class="input">
+            <p class="tip"></p>
+          </dd>
+        </dl>
+        <dl class="clearfix">
+          <dt><span class="asterisk">*</span>身份证号：</dt>
+          <dd>
+            <input type="text" name="card" class="input">
+            <p class="tip"></p>
+          </dd>
+        </dl>
+        <dl class="phone clearfix">
+          <dt>手机号码：</dt>
+          <dd>18888886666</dd>
+        </dl>
+        <dl class="product clearfix">
+          <dt>预约产品：</dt>
+          <dd>南京银行聚宝财富专享1号（98D）财富客户专享版聚宝财富专享1号1529期</dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>预约支行：</dt>
+          <dd>南京银行  上海北外滩支行</dd>
+        </dl>
+        <p class="default-tip">（马上理财是专业的理财平台，请实名制预约购买！个人信息仅供理财使用）</p>
+        <div class="button-bar"><button type="submit" class="btn btn-default">确认并保存</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+  var $popAppointForm = $("#popAppointForm");
+  var $name = $popAppointForm.find("input[name='name']");
+  var $card = $popAppointForm.find("input[name='card']");
+  var validate = new Validate();
+
+  //提交表单
+  $("#popAppointForm .btn-default").click(function(){
+    var handle1 = validateName();
+    var handle2 = validateCard();
+
+    if(!handle1){
+      $name.focus();
+      return false;
+    }
+
+    if(!handle2){
+      $card.focus();
+      return false;
+    }
+
+    alert("全部验证通过");
+    //ajax提交form...无错误关闭弹出框并跳转页面
+    closePopUp(this);
+    //有错误待写...
+    
+    return false;
+  })
+
+  $("#appointmentClose").click(function(){
+    closePopUp(this);
+  })
+
+  //关闭弹出窗
+  function closePopUp(element){
+    var $parents = $(element).parents(".m-pop-up");
+    $parents.remove();
+  }
+
+  //姓名（验证）
+  function validateName(){       
+      if(!validate.isNull($name,"姓名不能为空",validate.tipFuc)){
+        return false;
+      }
+      if(!validate.isChinese($name,validate.tipFuc)){
+        return false;
+      }
+      validate.tipFuc($name,"",true);
+      return true;
+  }
+
+  //身份证验证
+  function validateCard(){
+      if(!validate.isNull($card,"身份证号不能为空",validate.tipFuc)){
+        return false;
+      }
+      if(!validate.isCardNo($card,validate.tipFuc)){
+        return false;
+      }
+      validate.tipFuc($card,"",true);
+      return true;
+  }
+})
+</script>

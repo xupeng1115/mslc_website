@@ -1,0 +1,94 @@
+<div class="item-marquee" id="itemNew">
+  <span class="prev"></span>
+  <span class="next"></span>
+  <div class="box">
+    <ul>
+      <li>
+        <p class="logo"><img src="static/images/test.png"></p>
+        <p class="title">中国银行聚宝财富专享1号(98D)财富客户专享版1529期</p>
+        <p class="line"></p>
+        <p class="attention"><span class="ico"></span>关注<span class="value">2008</span>人</p>
+        <div class="intro clearfix">
+          <div class="profit">
+            <p class="pt rise"><span class="value1">6.60</span>%</p>
+            <p>预期年化收益</p>
+          </div>
+          <div class="lowest">
+            <p class="pt"><span class="value2">100</span>万</p>
+            <p>起购金额</p>
+          </div>
+          <div class="deadline">
+            <p class="pt"><span class="value2">360</span>天</p>
+            <p>理财期限</p>
+          </div>
+        </div>
+        <a href="#" class="button">马上预约</a>
+      </li>
+      <li>
+        <p class="logo"><img src="static/images/test.png"></p>
+        <p class="title">招商银行"步步稳"系列保本投资产品专享版258期</p>
+        <p class="line"></p>
+        <p class="attention"><span class="ico"></span>关注<span class="value">2008</span>人</p>
+        <div class="intro clearfix">
+          <div class="profit">
+            <p class="pt rise"><span class="value1">6.60</span>%</p>
+            <p>预期年化收益</p>
+          </div>
+          <div class="lowest">
+            <p class="pt"><span class="value2">100</span>万</p>
+            <p>起购金额</p>
+          </div>
+          <div class="deadline">
+            <p class="pt"><span class="value2">360</span>天</p>
+            <p>理财期限</p>
+          </div>
+        </div>
+        <a href="#" class="button">马上预约</a>
+      </li>
+      <li>
+        <p class="logo"><img src="static/images/test.png"></p>
+        <p class="title">建设银行"股得利"系列1532期人民币结构性投资产品EZQO</p>
+        <p class="line"></p>
+        <p class="attention"><span class="ico"></span>关注<span class="value">2008</span>人</p>
+        <div class="intro clearfix">
+          <div class="profit">
+            <p class="pt rise"><span class="value1">6.60</span>%</p>
+            <p>预期年化收益</p>
+          </div>
+          <div class="lowest">
+            <p class="pt"><span class="value2">100</span>万</p>
+            <p>起购金额</p>
+          </div>
+          <div class="deadline">
+            <p class="pt"><span class="value2">360</span>天</p>
+            <p>理财期限</p>
+          </div>
+        </div>
+        <a href="#" class="button">马上预约</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+  var marqueePro = new Marquee("#itemNew",{
+      auto:true,
+      trigger:true,
+      step:3
+  });
+
+  //单击马上预约，如果是新手则弹出马上理财六部曲提示框
+  $("#itemHot").on("click",".button",function(){
+
+    //判断条件待写
+    if(true){
+      marqueePro.boxHandle(false);
+      sixStep(function(element){
+          $(element).on("click",".close",function(){
+            marqueePro.boxHandle(true);
+          })
+      });
+      return false;
+    }
+    
+  })
+</script>

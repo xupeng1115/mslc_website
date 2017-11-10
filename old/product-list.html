@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>马上飞扬-产品推荐</title>
+<meta name="description" content="马上飞扬计算机技术有限公司是黄浦区金融办重点支持的新型互联网金融公司。公司创新了整合线上线下资源，将理财产品、银行物理网点、银行理财顾问、手机银行置于一体的“马上理财金融信息平台”。">
+<meta name="keywords" content="理财,银行,金融">
+<link href="static/css/common.css" rel="stylesheet">
+<script src="static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="static/js/common.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="header">
+  <div class="content-wrap">
+    <span class="logo"><a href="index.html"><img src="static/images/logo-header.png" alt="logo"></a></span>
+    <div class="login-box">
+      <ul>
+        <li class="login"><a href="#">登录</a></li>
+        <li class="register"><a href="#">注册</a></li>
+      </ul>
+    </div>
+    <div class="city" id="city">
+      <p class="current c-shanghai-c"><span class="txt">上海</span><span class="ico"></span></p>
+      <ul>
+        <li class="c-shanghai-c"><span>上海</span></li>
+        <li class="c-hangzhou-c"><span>杭州</span></li>
+        <li class="c-nanjing-c"><span>南京</span></li>
+        <li class="c-suzhou-c"><span>苏州</span></li>
+        <li class="c-shenzhen-c"><span>深圳</span></li>
+        <li class="c-wenzhou-c"><span>温州</span></li>
+      </ul>
+    </div>
+    <ul class="nav">
+      <li><a href="index.html">首页</a></li>
+      <li class="current"><a href="product-list.html">产品推荐</a></li>
+      <li><a href="novice-finance.html">新手理财</a></li>
+    </ul>
+  </div>
+</div>
+<!--/end header-->
+<div class="main-content p-product-list">
+  <div class="top">
+    <div class="content">
+      <div class="box" id="itemHot">
+        <ul>
+          <li>
+            <p class="title"><span class="bank-logo"><img src="static/images/test.png" alt=""></span><span class="
+            title-txt">招商银行"步步稳"系列保本投资产版2581532期期</span></p>
+            <div class="info">
+              <dl class="profit rise"><dt>预期年化收益：</dt><dd><span class="value1">8.30</span>%</dd></dl>
+              <dl class="lowest"><dt>起购金额：</dt><dd><span class="value2">100</span>万</dd></dl>
+              <dl class="deadline"><dt>理财期限：</dt><dd><span class="value2">180</span>天</dd></dl>
+            </div>
+            <div class="surplus-time">
+              <!--开售倒计时或者售罄倒计时-->
+              <p class="what">开售倒计时：</p>
+              <!--data-surplus : 剩余的毫秒数-->
+              <p class="time countdown" data-surplus="60000"><span class="t-value day"></span>天<span class="t-value hour"></span>时<span class="t-value minute"></span>分<span class="t-value second"></span>秒</p>
+            </div>          
+            <a href="#" class="btn-buy">马上预约</a>
+          </li>
+          <li>
+            <p class="title"><span class="bank-logo"><img src="static/images/test.png" alt=""></span><span class="
+            title-txt">建设银行"股得利"系列1532期人民币结构性</span></p>
+            <div class="info">
+              <dl class="profit"><dt>预期年化收益：</dt><dd><span class="value1">8.30</span>%</dd></dl>
+              <dl class="lowest"><dt>起购金额：</dt><dd><span class="value2">10</span>万</dd></dl>
+              <dl class="deadline"><dt>理财期限：</dt><dd><span class="value2">180</span>天</dd></dl>
+            </div>
+            <div class="surplus-time">
+              <!--开售倒计时或者售罄倒计时-->
+              <p class="what">开售倒计时：</p>
+              <!--data-surplus : 剩余的毫秒数-->
+              <p class="time countdown" data-surplus="60000"><span class="t-value day"></span>天<span class="t-value hour"></span>时<span class="t-value minute"></span>分<span class="t-value second"></span>秒</p>
+            </div>          
+            <a href="#" class="btn-buy">马上预约</a>
+          </li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+  <!--/end top轮播-->
+  <div class="m-search-terms" id="mSearchTerms">
+    <div class="search-terms-g1">
+      <div class="g1-left">
+        <ul id="sort">
+          <li><a href="#" class="txt current">最新</a></li>
+          <li><a href="#" class="txt">收益</a></li>
+        </ul>
+      </div>
+      <div class="g1-right">
+        <dl class="clearfix">
+          <dt>理财期限：</dt>
+          <dd id="selectDeadline">
+            <p class="current"><span class="select-item">不限</span><span class="ico"></span></p>
+            <ul>
+              <li>不限</li>
+              <li>3个月到6个月</li>
+              <li>3个月到9个月</li>
+              <li>3个月到12个月</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="search-terms-g2" id="searchTermsG2">
+      <div class="list">
+        <dl class="clearfix bank" id="termsBank">
+          <dt>发行银行</dt>
+          <dd class="condition1">
+            <label class="label"><span class="item on">全部</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+          <dd class="condition2">
+            <label class="label"><span class="item">招商银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">建设银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">广发银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">农业银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">工商银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">民生银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">广发银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">农业银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">工商银行</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">民生银行</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+          <dd class="more" id="showAllBank">更多</dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>销售状态</dt>
+          <dd class="condition1">
+            <label class="label"><span class="item on">不限</span><input type="checkbox" class="checkbox"></label>
+          <dd class="condition2">
+            <label class="label"><span class="item">预售</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">在售</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>投资金额</dt>
+          <dd class="condition1">
+            <label class="label"><span class="item on">不限</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+          <dd class="condition2">
+            <label class="label"><span class="item wDouble">5万以下（不含）</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">5-10万</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">10-30万</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">30-50万</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">50-100万</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item wAuto">100万以上（含）</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>风险程度</dt>
+          <dd class="condition1">
+            <span class="item on">不限</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+          <dd class="condition2">
+            <label class="label"><span class="item">极低风险</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">低风险</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">中风险</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">高风险</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">极高风险</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>产品类型</dt>
+          <dd class="condition1">
+            <label class="label"><span class="item on">不限</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+          <dd class="condition2">
+            <label class="label"><span class="item">信托类</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">信贷类</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">证券类</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">股权类</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">资管类</span><input type="checkbox" class="checkbox"></label>
+            <label class="label"><span class="item">组合投资类</span><input type="checkbox" class="checkbox"></label>
+          </dd>
+        </dl>
+      </div>
+      <p class="submit-bar"><button type="submit" class="btn-search" value=""></button></p>
+    </div>
+    <div class="search-terms-g3">
+      <p class="btn" id="btnIsShow"><span class="txt txt1">高级筛选</span><span class="txt txt2">收起</span></p>
+    </div>
+  </div>
+  <!--/end 检索排序条件-->
+  <div class="m-product-list">
+    <div class="list" id="productList">
+      <div class="item clearfix">
+        <div class="product-info">
+          <div class="bank-logo"><img src="static/images/test.png" alt=""></div>
+          <div class="details">
+            <p class="title"><a href="#">招商银行"步步稳"系列保本投资产品专享系列保本投资产品专享版258期版258期</a><span class="ico-new"></span><span class="ico-hot"></span></p>
+            <ul class="clearfix">
+              <li class="profit">
+                <p class="pt rise"><span class="value1">6.60</span>%</p>
+                <p class="lt">预期年化收益</p>
+              </li>
+              <li class="lowest">
+                <p class="pt"><span class="value2">100</span>万</p>
+                <p class="lt">起购金额</p>
+              </li>
+              <li class="deadline">
+                <p class="pt"><span class="value2">182</span>天</p>
+                <p class="lt">理财期限</p>
+              </li>
+              <li>
+                <p class="pt"><span class="risk risk0">极低</span></p>
+                <p class="lt">风险程度</p>
+              </li>
+              <li>
+                <p class="pt"><span class="type">组合投资类</span></p>
+                <p class="lt">产品类型</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-default">
+          <p><a href="#" class="btn btn1">马上预约</a></p>
+          <p><span class="btn btn2">计算收益</span></p>
+        </div>
+        <div class="buy-spread">
+          <span class="ico-arrow"></span>
+          <!--data-time:理财期限-->
+          <div class="form-cont" data-time="182">
+            <dl class="clearfix">
+              <dt>购买金额：</dt>
+              <dd><input type="text" class="input1 count" value="0" data-type="money"><span class="txt">元</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>预计收益：</dt>
+              <dd><span class="profit-value">0</span><span class="txt">元</span></dd>
+            </dl>
+            <a href="#" class="btn2">确认购买</a>
+          </div>
+        </div>
+      </div>
+      <!--/end item-->
+      <div class="item clearfix">
+        <div class="product-info">
+          <div class="bank-logo"><img src="static/images/test.png" alt=""></div>
+          <div class="details">
+            <p class="title"><a href="#">招商银行"步步稳"系列保本投资产品专享版258期</a><span class="ico-new"></span><span class="ico-hot"></span></p>
+            <ul class="clearfix">
+              <li class="profit">
+                <p class="pt rise"><span class="value1">6.60</span>%</p>
+                <p class="lt">预期年化收益</p>
+              </li>
+              <li class="lowest">
+                <p class="pt"><span class="value2">100</span>万</p>
+                <p class="lt">起购金额</p>
+              </li>
+              <li class="deadline">
+                <p class="pt"><span class="value2">360</span>天</p>
+                <p class="lt">理财期限</p>
+              </li>
+              <li>
+                <p class="pt"><span class="risk risk4">极高</span></p>
+                <p class="lt">风险程度</p>
+              </li>
+              <li>
+                <p class="pt"><span class="type">信托类</span></p>
+                <p class="lt">产品类型</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-default" >
+          <p><a href="#" class="btn btn1">马上预约</a></p>
+          <p><span class="btn btn2">计算收益</span></p>
+        </div>
+        <div class="buy-spread" >
+          <span class="ico-arrow"></span>
+          <div class="form-cont">
+            <dl class="clearfix">
+              <dt>购买金额：</dt>
+              <dd><input type="text" class="input1 count" value="0" data-type="money"><span class="txt">元</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>理财期限：</dt>
+              <dd><input type="text" class="input1 count" value="0" data-type="time"><span class="txt">天</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>预计收益：</dt>
+              <dd><span class="profit-value">0</span><span class="txt">元</span></dd>
+            </dl>
+            <a href="#" class="btn2">确认购买</a>
+          </div>
+        </div>
+      </div>
+      <!--/end item-->
+    </div>
+    <div class="m-page">
+      <div class="page-cont clearfix">
+        <ul>
+          <li class="w page-first disbled">第一页</li>
+          <li class="current">1</li>
+          <li class="ellipsis">...</li>
+          <li>10</li>
+          <li>11</li>
+          <li class="w page-next">下一页</li>
+        </ul>
+        <span class="txt all-txt">共10页</span>
+        <span class="txt txt1">到第</span>
+        <input type="text" class="page-input">
+        <span class="txt txt2">页</span>
+        <button class="btn-ok">确定</button>
+      </div>
+    </div>
+  </div>
+  <!--/end 产品列表-->
+</div>
+<!--/end main-content-->
+<div class="footer">
+  <div class="content-wrap">
+    <span class="logo"><a href="index.html"><img src="static/images/logo-footer.png" alt="logo"></a></span>
+    <ul class="links">
+      <li class="phone">400-547-4578</li>
+      <li class="about"><a href="#">关于马上理财</a></li>
+      <li class="news"><a href="#">媒体报道</a></li>
+      <li class="recruit"><a href="#">招贤纳士</a></li>
+      <li class="contact"><a href="#">联系我们</a></li>
+    </ul>
+    <ul class="icos">
+      <li><a href="javascript:;" title="微信" class="ico-weixin"></a></li>
+      <li><a href="javascript:;" title="新浪" class="ico-xinlang"></a></li>
+      <li><a href="javascript:;" title="知乎" class="ico-zhihu"></a></li>
+      <li><a href="javascript:;" title="豆瓣" class="ico-douban"></a></li>
+    </ul>
+  </div>
+</div>
+<!--/end footer-->
+<div class="sideR" id="sideR"></div>
+<!--/end sideR-->
+<script src="static/js/marquee.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    //头部产品上下滚动
+    var marqueeHot = new Marquee("#itemHot",{
+      auto:true,
+      screen:1,
+      dir:"bottom"
+    });
+
+    $(".countdown").countdown();
+
+    //理财期限选择
+    $("#selectDeadline .current").on("click",function(e){
+      $("#selectDeadline ul").slideDown();
+      $("#selectDeadline li").on("click",function(){
+        $("#selectDeadline .select-item").text($(this).text());
+      })
+      $(document).on("click.select.deadline",function(){
+        $("#selectDeadline ul").slideUp(function(){
+          $(document).off("click.select.deadline");
+        })
+      })
+      e.stopPropagation();
+    })
+
+    //高级筛选模块展开/收起
+    $("#btnIsShow").on("click",function(){  
+      $("#mSearchTerms").toggleClass('spread');
+    })
+
+    //高级筛选模块筛选
+    $("#searchTermsG2 .condition2 .item").on("click",function(){
+      var parent = $(this).parents(".condition2");
+      var allConditionItem = parent.prev().find(".item");
+      $(this).toggleClass('on');
+      if(parent.find(".item").hasClass('on')){
+        allConditionItem.removeClass('on');
+        allConditionItem.next().attr('checkbox',false);
+      }else{
+        allConditionItem.addClass('on');
+        allConditionItem.next().attr('checkbox',true);
+      }
+    })
+    $("#searchTermsG2 .condition1 .item").on("click",function(){
+      if($(this).hasClass('on')){
+        return false;
+      }else{
+        $(this).addClass('on');
+        $(this).parents(".condition1").next().find(".item").removeClass('on');
+        $(this).parents(".condition1").next().find(".checkbox").attr('checkbox',false);
+      }
+    })
+
+    //银行更多展开/收起
+    $("#showAllBank").on("click",function(){
+      $("#termsBank").toggleClass('showAll');
+    })
+
+    //计算收益模块展示
+    $("#productList .item").on("click",".btn2",function(){
+      var $item = $(this).parents(".item");
+      var $spread = $item.find(".buy-spread");
+      var $sib  = $item.siblings('.spread');
+      var h1 = $spread.height();
+      var h2 = $item.find(".product-info").outerHeight();
+
+      //重置上一个已展开的计算收益模块
+      if($sib){
+        $sib.removeClass('spread');
+        $sib.find('.buy-spread').css("marginLeft","360px");
+        $sib.find(".input1").val("0");
+        $sib.find(".profit-value").text("0");
+      }
+
+      if(h1<h2){
+        $spread.height(h2);
+      }
+      $item.addClass('spread');
+      $item.find('.buy-spread').animate({marginLeft:0}, 500);
+    })
+  })
+</script>
+<script type="text/javascript">
+  //切换城市
+  selectCity("#city",function(currentCity){
+    //参数currentCity为当前选择的城市
+    //alert(currentCity)
+  })
+</script>
+</body>
+</html>

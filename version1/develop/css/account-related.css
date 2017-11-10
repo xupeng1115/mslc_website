@@ -1,0 +1,136 @@
+
+
+/*************************************账户相关********************************/
+.account-related .main-content{ background: url(../img/account-related/bg.png) repeat-x center 0; padding: 80px 0 90px;}
+.account-related .footer .s1{ background-color: #f9f9f9; }
+
+.m-f-intro { text-align: center; margin-top: 80px; padding-top: 30px; border-top:1px solid #909090;}
+.m-f-intro ul{ display: inline-block; *display: inline; *zoom:1; font-size: 16px; vertical-align: top;}
+.m-f-intro li{ float: left; line-height: 26px; background: url(../img/account-related/intro.png) no-repeat; padding-left: 25px;}
+.m-f-intro .item0{ background-position: 0 1px; padding-left: 22px;}
+.m-f-intro .item1{ background-position: 0 -35px; }
+.m-f-intro .item2{ background-position: 0 -75px; }
+.m-f-intro .line{ color: #909090; padding: 0 35px;}
+
+
+.form-base .input-default{ float:left; border:1px solid #808080; width: 360px; height: 40px; line-height: 40px; padding-left: 8px; font-size: 16px; overflow: hidden; border-radius: 5px;}
+.form-base .input-default.short{ width: 220px; }
+.form-base .input-default:focus{ border-color: #ff6060; box-shadow: 0 0 1px 1px rgba(255,96,96,0.5);}
+.form-base .btn-submit{ float: left; width: 100%; height: 47px; overflow: hidden; border:0; border-radius: 5px; background-color: #ff6060; color: #fff; font-size: 20px;}
+.form-base .btn-submit.disable{ background-color: #ccc; cursor: auto;}
+.form-base .check-bar{ line-height: 21px; font-size: 14px; }
+.form-base .checkbox{ float: left; margin:4px 6px 0 0; *margin:1px 3px 0 -4px;}
+.form-base .checkbox-txt{float: left; }
+
+/*~~~~~~~~~~~~~~~登录~~~~~~~~~~~~~~~*/
+
+.p-login .login-left{ float: left; width: 600px; text-align: center;}
+.p-login .login-right{ float: right; width: 370px; margin-right: 50px; text-align: center; }
+.p-login .title-bar{ line-height: 30px; padding: 8px 0;}
+.p-login h3{float: left; font-size: 24px;}
+.p-login .go-register{float: right; font-size: 18px; color: #ff6060;}
+.p-login .form-cont{ position: relative; z-index: 0; }
+.p-login .input-box{ padding-top: 18px; }
+.p-login .input-default{width: 318px; padding-left: 50px; background: url(../img/account-related/login-input.png) no-repeat;}
+.p-login .input-default.psd{ background-position: 0 -40px; }
+.p-login .check-bar{ margin-top: 15px;}
+.p-login .check-bar .langing{ float: left; }
+.p-login .check-bar .forgot-psd{ float: right; color: #ff6060; }
+.p-login .btn-bar{ margin-top: 35px; }
+
+
+/*~~~~~~~~~~~~~~~注册~~~~~~~~~~~~~~~*/
+.p-register .form-base{ padding-left: 200px; }
+.p-register h2{ padding:0 0 30px 125px; width: 370px; text-align:center; color: #ff6060; font-size: 40px; line-height: 1.5;}
+.p-register dl{ line-height: 42px; margin-bottom: 18px;}
+.p-register dt{ float: left; width:110px; min-height: 42px; padding-right: 15px; text-align: right; font-size: 18px; font-weight: 700;}
+.p-register dd{ float: left; }
+.p-register .input-default.short{ width: 210px; }
+
+.p-register .btn-code{ float: left; width: 142px; text-align: center; font-size: 18px; height: 40px; line-height: 40px; border:1px solid #808080; background-color: #f8f8f8; margin-left: 6px; cursor: pointer; overflow: hidden; border-radius: 5px;}
+.p-register .btn-code.disable{ color: #ccc; cursor: auto; font-size: 16px;}
+.p-register .check-bar{ margin-left: 125px; margin-top: -5px;}
+.p-register .check-bar a{ text-decoration: underline; color: #ff6060;}
+.p-register .btn-bar,
+.p-register .had{ margin:40px 0 0 125px; width: 370px;}
+.p-register .had{ font-size: 18px; margin-top:18px; text-align: center;}
+.p-register .had a{color: #ff6060;}
+.p-register .tip{ font-size: 14px; color: #ff6060; margin:10px 0 0 10px; line-height: 22px;}
+
+/*~~用户协议(弹出框)~~*/
+.m-pop-agreement .m-pop-cont{ width: 800px; margin-left: -400px; padding-bottom: 36px; background-color: #fff; border-radius: 5px;}
+.m-pop-agreement .close{ position: absolute; right: 15px; top: 10px; width: 22px; height: 22px; overflow: hidden; background: url(../img/ico-base.png) no-repeat 0 -428px; cursor: pointer;}
+.m-pop-agreement .title{ text-align: center; margin:0 50px; padding: 40px 0 20px; font-size: 30px; line-height: 1.2; color: #ff6060; border-bottom: 1px solid #909090;}
+.m-pop-agreement .agreement{ margin:0 15px 0 50px; max-height: 270px; overflow: auto; line-height: 30px; padding:0 30px 0 0; text-align: left; font-size: 16px;}
+
+.m-pop-agreement .check-bar{ margin:0 50px; border-top: 1px solid #909090; padding-top: 15px;}
+.m-pop-agreement .check-bar .checkbox{ float: left;margin:4px 6px 0 0; *margin:0 3px 0 -4px;}
+.m-pop-agreement .check-bar .txt{ float: left; font-size: 16px;}
+.m-pop-agreement .button-bar{ margin:25px 0 0; }
+.m-pop-agreement .button-bar .btn{ display: block; width: 180px; height: 38px; line-height: 38px; margin:0 auto; overflow: hidden; background-color: #ff6060; color: #fff; font-size: 20px; border: 0; border-radius: 5px; letter-spacing: 0;}
+.m-pop-agreement .agreement-cont{ padding: 25px 0; }
+.m-pop-agreement .agreement-cont dt,
+.m-pop-agreement .agreement-cont dd,
+.m-pop-agreement .agreement-cont .intro{ text-indent: 2em;}
+.m-pop-agreement .agreement-cont dt,
+.m-pop-agreement .agreement-cont .blod{ font-weight: bold;}
+.m-pop-agreement .agreement-cont dt{ color: #000; }
+.m-pop-agreement .agreement-cont dd dt{ font-weight: 400; color: #333;}
+.m-pop-agreement .agreement-cont .intro,dl{ margin:1rem 0; }
+.m-pop-agreement .agreement-cont dd dl{ margin:0; }
+
+
+/*~~~~~~~~~~~~~~~找回密码~~~~~~~~~~~~*/
+.p-retrieve-password h3{ font-size: 40px; color: #ff6060; text-align: center; line-height: 1.5; }
+.p-retrieve-password .pic-tip{ width: 690px; margin:45px auto 0; height: 30px; background: url(../img/account-related/retrieve-password.png) no-repeat; position: relative; z-index: 0;}
+.p-retrieve-password .pic-tip li{ position: absolute; top: 0; color: #808080; line-height: 30px; font-size: 16px;}
+.p-retrieve-password .pic-tip .s1{ left:75px; }
+.p-retrieve-password .pic-tip .s2{ left:285px; }
+.p-retrieve-password .pic-tip .s3{ left:434px; }
+.p-retrieve-password .pic-tip .s4{ left:603px; }
+.p-retrieve-password.step2 .pic-tip{ background-position: 0 -30px; }
+.p-retrieve-password.step3 .pic-tip{ background-position: 0 -60px; }
+.p-retrieve-password.step1 .pic-tip .s1{ left: 99px; color: #fff;}
+.p-retrieve-password.step2 .pic-tip .s2{ left: 257px; color: #fff;}
+.p-retrieve-password.step3 .pic-tip .s2{ left: 232px; }
+.p-retrieve-password.step3 .pic-tip .s3{ left: 408px; color: #fff;}
+
+.p-retrieve-password .form-cont{ margin:75px 0 0 205px; font-size: 14px;}
+.p-retrieve-password dl{ line-height: 42px; margin-bottom: 18px;}
+.p-retrieve-password dt{ float: left; width:130px; min-height: 42px; padding-right: 15px; text-align: right; font-size: 18px; font-weight: 700;}
+.p-retrieve-password dd{ float: left; }
+.p-retrieve-password .tip{ font-size: 14px; color: #ff6060; margin:10px 0 0 10px; line-height: 22px;}
+.p-retrieve-password .phone{ font-size: 18px; font-weight: 700; }
+.p-retrieve-password .input-default{ float:left; border:1px solid #808080; width: 370px; height: 40px; line-height: 40px; padding-left: 8px; font-size: 16px; overflow: hidden; border-radius: 5px;}
+.p-retrieve-password .input-default.short{ width: 220px; }
+.p-retrieve-password .input-default.shorter{ width: 200px; }
+.p-retrieve-password .input-default:focus{ border-color: #ff6060; box-shadow: 0 0 1px 1px rgba(255,96,96,0.5);}
+.p-retrieve-password .code-pic{ float: left; width: 140px; margin-left: 8px; height: 40px; border:1px solid #808080; border-radius: 5px; overflow: hidden;}
+.p-retrieve-password .update-code{float: left; margin-left: 20px; font-size: 14px; color: #ff6060; cursor: pointer;}
+.p-retrieve-password .update-code i{ float: left; width: 17px; height: 16px; margin:13px 7px 0 0; overflow: hidden; background: url(../img/ico-base.png) no-repeat 0 -484px;}
+.p-retrieve-password .update-code em{ float: left; }
+.p-retrieve-password .update-code.move i{animation:move 0.6s;-webkit-animation:move 0.6s; -moz-animation:move 0.6s;-o-animation:move 0.6s;}
+.p-retrieve-password .system-tip{ font-size: 14px; color: #787878;  margin:0 0 0 145px; background: url(../img/validate-ico.png) no-repeat; padding-left: 30px;}
+
+.p-retrieve-password .btn-bar{ margin:70px 0 0 145px; }
+.p-retrieve-password .btn-prev,
+.p-retrieve-password .btn-submit{ float: left; width: 380px; height: 47px; line-height: 47px; text-align: center; overflow: hidden; border:0; border-radius: 5px; background-color: #ff6060; color: #fff; font-size: 20px;}
+.p-retrieve-password .btn-prev{ height: 45px; line-height: 45px; border:1px solid #787878; color: #595959; background-color: #fff; margin-right: 5px;}
+.p-retrieve-password .short{ width: 180px; }
+.p-retrieve-password .remember-psd{ text-align: center; width: 380px; font-size: 16px; margin-top: 22px; margin-left: 145px;}
+.p-retrieve-password .remember-psd a{ color: #ff6060; }
+.p-retrieve-password .btn-code{ float: left; width: 142px; text-align: center; font-size: 18px; height: 40px; line-height: 40px; border:1px solid #808080; background-color: #f8f8f8; margin-left: 6px; cursor: pointer; overflow: hidden; border-radius: 5px;}
+.p-retrieve-password .btn-code.disable{ color: #ccc; cursor: auto; font-size: 16px;}
+.p-retrieve-password .voice{ float: left; margin-left: 10px; padding:0 10px; background:red; color: #fff; cursor: pointer;}
+
+
+/*~~密码修改成功(弹出框)~~*/
+.m-pop-psdSuccess .m-pop-cont{ width: 800px; margin-left: -400px; padding-bottom: 36px; background-color: #fff; border-radius: 5px; text-align: center;}
+.m-pop-psdSuccess .close{ position: absolute; right: 15px; top: 10px; width: 22px; height: 22px; overflow: hidden; background: url(../img/ico-base.png) no-repeat 0 -428px; cursor: pointer;}
+.m-pop-psdSuccess .content{ padding: 100px 0 40px; line-height: 2;}
+
+.m-pop-psdSuccess .txt-success{ margin-top: 20px; font-size: 30px; font-weight: 700; color: #ff6060; }
+.m-pop-psdSuccess .tip-jump{ margin-top: 5px;}
+
+.m-pop-psdSuccess .button-bar{ margin:70px 0 0; }
+.m-pop-psdSuccess .button-bar .btn{ display: block; width: 370px; height: 38px; line-height: 38px; margin:0 auto; overflow: hidden; background-color: #ff6060; color: #fff; font-size: 20px; border: 0; border-radius: 5px; letter-spacing: 0;}

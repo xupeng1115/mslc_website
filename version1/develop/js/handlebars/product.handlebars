@@ -1,0 +1,59 @@
+<ul>
+    {{#each products}}
+    <li data-base="{{estimatedYearRate}}" data-bonus="{{redeemRate}}" data-duration="{{duration}}" data-purchase="{{minimumPurchase}}">
+        <div class="detail">
+            <div class="s1 clearfix">
+                <dl class="profit {{hasBonus}}">
+                    <dd>
+                        <span class="base inline">{{twoDecimals estimatedYearRate}}</span>
+                        {{#if redeemRate}}
+                        <span class="sign inline">+</span>
+                        <span class="bonus inline">{{redeemRate}}</span>
+                        {{/if}}
+                    </dd>
+                    <dt>预期年化收益%</dt>
+                </dl>
+                <dl class="minimum-purchase">
+                    <dd><i>{{minimumPurchase}}</i><b>万</b></dd>
+                    <dt>起购金额</dt>
+                </dl>
+                <dl class="duration">
+                    <dd>{{productListDurationDom duration}}</dd>
+                    <dt>理财期限</dt>
+                </dl>
+                <dl class="risk-type">
+                    <dd><span class="ico-risk risk{{riskId}}">{{riskLevel}}</span></dd>
+                    <dt>风险程度</dt>
+                </dl>
+                <dl class="investment-type">
+                    <dd><span class="ico-type inline">{{investmentType}}</span></dd>
+                    <dt>产品类型</dt>
+                </dl>
+            </div>
+            <div class="s2">
+                {{productListTipDom redeemRate}}
+            </div>
+        </div>
+        <div class="operate">
+            <a href="/pages/product-detail.html?pid={{id}}" class="btn btn1">查看详情</a>
+            <p class="btn btn2 buttonCount">计算收益</p>
+        </div>
+        <div class="count formCountProfit" data-profit="{{estimatedYearRate}}" data-purchase="{{minimumPurchase}}">
+            <dl class="clearfix">
+              <dt>购买金额</dt>
+              <dd><input type="text" maxlength="11" class="input1 moneyInput" data-defaultvalue="{{minimumPurchase}}" data-type="money" data-count="count" placeholder="起购金额{{minimumPurchase}}万"><span class="txt">元</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>理财期限</dt>
+              <dd>{{productListDurationValue duration}}<span class="txt">天</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>预期收益</dt>
+              <dd><span class="profit-value">0</span><span class="txt">元</span></dd>
+            </dl>
+            <a href="/pages/product-detail.html?pid={{id}}" class="btn btn3">查看详情</a>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>马上飞扬-产品详情页</title>
+<meta name="description" content="马上飞扬计算机技术有限公司是黄浦区金融办重点支持的新型互联网金融公司。公司创新了整合线上线下资源，将理财产品、银行物理网点、银行理财顾问、手机银行置于一体的“马上理财金融信息平台”。">
+<meta name="keywords" content="理财,银行,金融">
+<link href="static/css/common.css" rel="stylesheet">
+<script src="static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="static/js/common.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="header">
+  <div class="content-wrap">
+    <span class="logo"><a href="index.html"><img src="static/images/logo-header.png" alt="logo"></a></span>
+    <div class="login-box">
+      <ul>
+        <li class="login"><a href="#">登录</a></li>
+        <li class="register"><a href="#">注册</a></li>
+      </ul>
+    </div>
+    <div class="city" id="city">
+      <p class="current c-shanghai-c"><span class="txt">上海</span><span class="ico"></span></p>
+      <ul>
+        <li class="c-shanghai-c"><span>上海</span></li>
+        <li class="c-hangzhou-c"><span>杭州</span></li>
+        <li class="c-nanjing-c"><span>南京</span></li>
+        <li class="c-suzhou-c"><span>苏州</span></li>
+        <li class="c-shenzhen-c"><span>深圳</span></li>
+        <li class="c-wenzhou-c"><span>温州</span></li>
+      </ul>
+    </div>
+    <ul class="nav">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="product-list.html">产品推荐</a></li>
+      <li><a href="novice-finance.html">新手理财</a></li>
+    </ul>
+  </div>
+</div>
+<!--/end header-->
+<div class="main-content p-product-details">
+  <div class="m-product-details-s1">
+    <div class="content-wrap">
+      <div class="intro-chart">
+        <div class="chart">
+          <div class="chart-cont">
+            <div class="bg"></div>
+            <div class="money-ico1" id="moneyIco1"></div>
+            <div class="money-ico2" id="moneyIco2"></div>
+            <p class="money-txt money1" id="moneyTxt1">起购<br><span class="money-v">5万</span></p>
+            <div class="money-txt money2" id="moneyTxt2">
+              <p class="money2-d" id="moneyTxt2D">预期收益<br><span class="money-v"><span class="money-num">1533.43</span>元</span></p>
+            </div>
+            <div class="profit">
+              <p><span class="v1">6</span><span class="v2">.80</span><span class="v3">%</span></p>
+              <p>预期最高年化收益率</p>
+            </div>
+            <div class="colors" id="chartColors">
+              <p class="c4"></p>
+              <p class="c3"></p>
+              <p class="c2"></p>
+              <p class="c1"></p>
+            </div>
+          </div>
+          <div class="chart-data">
+            <ul class="clearfix">
+              <li class="d1">
+                <p class="txt1">开售</p>
+                <p class="txt2">2015-08-32</p>
+              </li>
+              <li class="d2">
+                <p class="txt1">开赚</p>
+                <p class="txt2">2015-08-31</p>
+              </li>
+              <li class="d3" id="chartD3">
+                <div class="d3-txt" id="chartD3Txt">
+                  <p class="txt1">理财期限</p>
+                  <p class="txt4"><span class="time-num">182</span>天</p>
+                </div>
+              </li>
+              <li class="d4">
+                <p class="txt1">收钱</p>
+                <p class="txt2">2015-08-31</p>
+                <p class="txt3">(可随时赎回)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="share">
+          <ul class="clearfix">
+            <li class="ico1"><a href="javascript:;" id="shareBtn">分享</a><span class="line">|</span></li>
+            <li class="ico2"><a href="javascript:;">收藏产品</a>（320人气）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="intro-attr">
+        <div class="title-bar">
+          <div class="bank-logo"><img src="static/images/test2.png"></div>
+          <h3 class="name">南京银行聚宝财富专享1号（98D）财富客户专享版1529期</h3>
+        </div>
+        <div class="attr">
+          <form action="">
+            <div class="info">
+              <p class="profit">预期年化收益：<span class="value1">6.80%</span></p>
+              <p class="lowest-deadline">起购金额：5万<span class="line">|</span>理财期限：182天</p>
+            </div>
+            <div class="surplus-time clearfix">
+              <!--开售倒计时或者售罄倒计时-->
+              <p class="what">开售倒计时：</p>
+              <!--data-surplus : 剩余的毫秒数-->
+              <p class="time countdown" data-surplus="60000"><span class="t-value day"></span>天<span class="t-value hour"></span>时<span class="t-value minute"></span>分<span class="t-value second"></span>秒</p>
+            </div>
+            <!--data-time:理财期限,无固定期限的则为空或者不写-->
+            <div class="put-cont" id="formCont" data-time="">
+              <dl class="clearfix">
+                <dt>购买金额：</dt>
+                <dd>
+                  <input type="text" class="txt-input" data-type="money" id="moneyInput" data-defaultvalue="5万" placeholder="起购金额5万" />
+                  <span class="unit">元</span>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>认购期限：</dt>
+                <dd>
+                  <input type="text" class="txt-input" data-type="time" id="timeInput" />
+                  <span class="unit">天</span>
+                </dd>
+              </dl>
+              <dl class="clearfix" id="selectBranch">
+                <dt>购买支行：</dt>
+                <dd class="select-dd select-first">
+                  <p class="current clearfix">
+                    <span class="txt-input min">请选择</span>
+                    <span class="ico-arrow"><i></i></span>
+                  </p>
+                  <div class="list">
+                    <ul>
+                      <li>浦东新区</li>
+                      <li>虹口区</li>
+                      <li>宝山区</li>
+                      <li>普陀区</li>
+                    </ul>
+                  </div>
+                </dd>
+                <dd class="select-dd">
+                  <p class="current clearfix">
+                    <span class="txt-input min">请选择</span>
+                    <span class="ico-arrow"><i></i></span>
+                  </p>
+                  <div class="list">
+                    <ul>
+                      <li>北外滩支行</li>
+                      <li>浦东支行</li>
+                      <li>嘉定支行</li>
+                      <li>市北支行</li>
+                      <li>长宁支行</li>
+                      <li>普陀支行</li>
+                      <li>北外滩支行</li>
+                      <li>浦东支行</li>
+                      <li>嘉定支行</li>
+                      <li>市北支行</li>
+                      <li>长宁支行</li>
+                      <li>普陀支行</li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="btn-bar clearfix">
+              <button type="button" class="btn-submit-min" id="countAnimate">计算收益</button>
+              <button type="submit" class="btn-submit" id="submitProduct">马上预约</button>
+            </div>
+          </form>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/end 产品详情第一区块-->
+  <div class="m-product-details-s2">
+    <div class="s2-tab" id="s2Tab">
+      <div class="content-wrap">
+        <ul class="clearfix">
+          <li class="first active">产品详情</li>
+          <li>产品咨询</li>
+        </ul>
+      </div>
+    </div>
+    <div class="s2-content" id="s2Content">
+      <div class="content-wrap">
+        <div class="s2-item s2-item-details">
+          <p class="name">南京银行聚宝财富专享1号（98D）财富客户专享版1529期</p>
+          <div class="table">
+            <ul class="clearfix">
+              <li class="hasBG">
+                <dl>
+                  <dt>产品代码：</dt>
+                  <dd>2301147304</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>发行公司：</dt>
+                  <dd>南京银行</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>销售银行：</dt>
+                  <dd>南京银行</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>预期收益：</dt>
+                  <dd>6.80%</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>理财期限：</dt>
+                  <dd>273天</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>理财币种：</dt>
+                  <dd>人民币</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>风险类型：</dt>
+                  <dd>非保本</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>风险程度：</dt>
+                  <dd>低风险</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>起购金额：</dt>
+                  <dd>10 （万元）</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>专属标识：</dt>
+                  <dd>高净值客户专属</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>产品类型：</dt>
+                  <dd>组合投资类</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>起售日：</dt>
+                  <dd>2014-09-10  09：00</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>停售日：</dt>
+                  <dd>2099-01-01  17：00</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>起息日：</dt>
+                  <dd>申购次日</dd>
+                </dl>
+              </li>
+              <li class="hasBG">
+                <dl>
+                  <dt>到期日：</dt>
+                  <dd>根据申购日确定</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <p class="banner"><img src="static/images/p-d-s2-banner.jpg"></p>
+          <div class="small-item purchase-description">
+            <p class="title">购买说明</p>
+            <div class="cont clearfix">
+              <div class="txt">本产品预期年化收益率为5.6%。本产品自2015年8月12日起计息，根据投资人持有产品的实际天数计算收益，产品到期日不计息。本产品认购期间(2015年8月7日-2015年8月11日)认购资金不计息。</div>
+              <div class="img"><img src="static/images/s2-purchase-description.jpg"></div>
+            </div>
+          </div>
+          <div class="small-item questions">
+            <p class="title">常见问题</p>
+            <div class="cont clearfix">
+              <dl>
+                <dt>Q1.   该理财产品的风险大吗？是否保本保息？</dt>
+                <dd class="ico"></dd>
+                <dd class="reply">易诚宝是一款保本保息的固定收益理财产品，7%的年华收益率为约定利率，产品到期后保证本息一起返还，极低风险。</dd>
+              </dl>
+              <dl>
+                <dt>Q2.   该产品可以中途提取吗？到期后如何领取本息？</dt>
+                <dd class="ico"></dd>
+                <dd class="reply">易诚宝是定期的理财产品，产品计息期内无法赎回。产品到期后，网易会在3个工作日内将本金和利息返回到您的付款账户。</dd>
+              </dl>
+              <dl>
+                <dt>Q3.   该产品是否收取手续费用？</dt>
+                <dd class="ico"></dd>
+                <dd class="reply">易诚宝不收取用户任何手续费。</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="s2-item s2-item-consult">
+          <div class="consult-form clearfix">
+            <div class="head-portrait"><img src="static/images/test1.png"><i><img src="static/images/ie-head.png"></i></div>
+            <div class="form-content">
+              <p class="title">“我对这款产品有一些话要说！”</p>
+              <p class="clearfix"><textarea placeholder="有什么问题问问理财小助手..." id="ask"></textarea></p>
+              <div class="submit-bar clearfix"> 
+                <button type="submit" class="btn-submit">发布问题</button>
+                <span class="expression"></span>
+                <span class="value-tip">还可以输入<span class="value" id="charValue">100</span>字</span>
+              </div>
+            </div>
+          </div>
+          <!--/end 提问区域-->
+          <div class="consult-list">
+            <p class="title">最新问题</p>
+            <ul class="clearfix">
+              <li>
+                <span class="head-portrait"><img src="static/images/test1.png"><i><img src="static/images/ie-head.png"></i></span>
+                <div class="consult-des">
+                  <div class="t-other"><span class="nickname">张**先生</span><span class="time">13小时前</span></div>
+                  <div class="t-question">我2015.8.9号投保 5万 半年后赎回是不是可2015.8.9号投保 5万 半年后赎回是不是以拿5万的本金+3250元利息？</div>
+                  <div class="t-reply">
+                    <dl class="clearfix">
+                      <dt>回复</dt>
+                      <dd>你说的太对了，恭喜你！</dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="head-portrait"><img src="static/images/test1.png"><i><img src="static/images/ie-head.png"></i></span>
+                <div class="consult-des">
+                  <div class="t-other"><span class="nickname">张**先生</span><span class="time">13小时前</span></div>
+                  <div class="t-question">保 5万 半年后赎回是不是可2015.8.9号投保 5万 半年后赎回是不是以拿5万的本金+3250元利息？</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--/end 咨询列表-->
+          <div class="m-page">
+            <div class="page-cont clearfix">
+              <ul>
+                <li class="w page-first disbled">第一页</li>
+                <li class="current">1</li>
+                <li class="w page-next disbled">下一页</li>
+              </ul>
+              <span class="txt all-txt">共1页</span>
+              <span class="txt txt1">到第</span>
+              <input type="text" class="page-input">
+              <span class="txt txt2">页</span>
+              <button class="btn-ok">确定</button>
+            </div>
+          </div>
+          <!--/end 分页-->
+        </div>
+        <!--/end s2-item(产品咨询)-->
+      </div>
+    </div>
+  </div>
+  <!--/end 产品详情第二区块-->
+</div>
+<!--/end main-content-->
+<div class="footer">
+  <div class="content-wrap">
+    <span class="logo"><a href="index.html"><img src="static/images/logo-footer.png" alt="logo"></a></span>
+    <ul class="links">
+      <li class="phone">400-547-4578</li>
+      <li class="about"><a href="#">关于马上理财</a></li>
+      <li class="news"><a href="#">媒体报道</a></li>
+      <li class="recruit"><a href="#">招贤纳士</a></li>
+      <li class="contact"><a href="#">联系我们</a></li>
+    </ul>
+    <ul class="icos">
+      <li><a href="javascript:;" title="微信" class="ico-weixin"></a></li>
+      <li><a href="javascript:;" title="新浪" class="ico-xinlang"></a></li>
+      <li><a href="javascript:;" title="知乎" class="ico-zhihu"></a></li>
+      <li><a href="javascript:;" title="豆瓣" class="ico-douban"></a></li>
+    </ul>
+  </div>
+</div>
+<!--/end footer-->
+<div class="sideR" id="sideR"></div>
+<!--/end sideR-->
+<script src="static/js/validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+  //动画easing
+  jQuery.extend( jQuery.easing, {  
+      easeOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined) s = 1.30158;
+        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+      } 
+  })
+
+  //产品图表动画
+  function chart(isDir){
+    var bottomNum = isDir?"290px":"122px";
+    $("#moneyIco1").addClass('animating');
+    $("#moneyIco1").animate({bottom:bottomNum}, 1200, "easeOutBack",function(){
+      var w1 = $("#chartD3").width();
+      var w2 = $("#moneyTxt2").width();
+      $("#chartD3").width("0");
+      $("#moneyTxt2").width("0");
+      $("#chartD3Txt").width(w1);
+      $("#moneyTxt2D").width(w2);
+      $("#chartColors").slideDown(1000, function() {
+        $("#moneyIco2").slideDown(300);
+        $("#chartD3").show().animate({width:w1}, 500);
+        $("#moneyTxt2").show().animate({width:w2}, 500,function(){
+          $("#moneyIco1").removeClass('animating');
+        });
+      });
+    })
+  }
+  
+  //单击计算收益按钮
+  $("#countAnimate").on("click",function(){
+    var result;
+    var profitValue = $("#moneyTxt2D").find(".money-num");
+    var profitTime = $("#chartD3Txt").find(".time-num");
+    var money = parseInt($("#moneyInput").val().replace(/,/gi, ""));
+    var defaultValue = $("#moneyInput").data("defaultvalue");
+    var numValue = parseInt(defaultValue)*10000;
+    var time;
+    if($("#moneyIco1").hasClass('animating')){return;}
+    if($("#formCont").data("time")){
+      time = $("#formCont").data("time")
+    }else{
+      time = $("#timeInput").val();
+    } 
+    if(time=="0" || time=="" || money=="0" || money=="" || isNaN(money) || money<numValue){
+      return;
+    }
+
+    //格式化动画数据
+    $("#moneyIco1").removeAttr('style');
+    $("#chartD3").removeAttr('style');
+    $("#moneyTxt2").removeAttr('style');
+    $("#chartD3Txt").removeAttr('style');
+    $("#moneyTxt2D").removeAttr('style');
+    $("#chartColors").removeAttr('style');
+    $("#moneyIco2").removeAttr('style');
+    //计算收益结果
+    result=(money*6.60*time/100/365).toFixed(1);
+    if(result>Math.pow(10,10)-1){
+      result = parseInt(result,10).toExponential(6);
+    }
+    profitValue.text(result);
+    profitTime.text(time);
+    chart(true);
+  })
+
+  loadImage("static/images/chart-bg.png",chart);
+})
+</script>
+
+<script type="text/javascript">
+//选择支行
+$(function(){
+  $("#selectBranch .current").on("click",function(e){
+    var $list = $(this).next();
+    var $parent = $(this).parent(); 
+    $parent.toggleClass('show');
+    if($parent.hasClass('show')){
+      $(document).on("click.branch",function(){
+        $parent.removeClass('show');
+        $(document).off("click.branch");
+      })
+    }
+    e.stopPropagation();
+  })
+  $("#selectBranch li").on("click",function(e){
+    var $parent = $(this).parents(".select-dd");
+    $(".txt-input",$parent).text($(this).text());
+    $parent.toggleClass('show');
+    //如果是区域select(第一个select框)
+    if($parent.hasClass('select-first')){
+      //执行ajax更新右侧支行信息
+    }
+    e.stopPropagation();
+  })
+})  
+</script>
+<script type="text/javascript">
+  //单击马上购买
+$(function(){
+  $("#submitProduct").on("click",function(){
+
+    //登录状态且验证成功待写
+    alert("验证成功");
+    $("body").append('<div class="m-pop-up m-pop-appointment" id="popAppointment"></div>');
+    $("#popAppointment").load("/ajax/ajax-appointment.html",function(){
+      popUpPosition($("#popAppointment"));
+    })
+    return false;
+  })
+})
+</script>
+<script type="text/javascript">
+$(function(){
+
+  //倒计时
+  $(".countdown").countdown();
+
+  //单击分享
+  $("#shareBtn").on("click",function(){
+    mPopUp({
+      type : "alert",
+      diyClass : "m-pop-share-weixin",
+      title : "分享到微信朋友圈",
+      msg : '<p class="share-pic"><img src="static/images/qr-code/pro-qr.png" alt=""></p><p class="share-txt">使用“扫一扫“即可将网页分享到朋友圈。</p>',
+      hadBtn : false
+    })
+  })
+
+  //产品详情主内容（第二区块）切换
+  $("#s2Tab li").on("click",function(){
+    var index = $(this).index();
+    $(this).addClass('active').siblings().removeClass('active');
+    $("#s2Content .s2-item").eq(index).siblings().hide().css("opacity","0");
+    $("#s2Content .s2-item").eq(index).show().animate({opacity:1}, 500);
+  })
+
+  //提问文本框判断字符
+  $("#ask").on("keyup",function(){
+    var maxLen = 100;
+    if($(this).val().length>maxLen){
+      $(this).val(function(){
+        return this.value.substring(0,maxLen);
+      })
+    }else{
+      $("#charValue").text(maxLen-$(this).val().length);
+    }
+  })
+})
+</script>
+<script type="text/javascript">
+  //切换城市
+  selectCity("#city",function(currentCity){
+    //参数currentCity为当前选择的城市
+    //alert(currentCity)
+  })
+</script>
+</body>
+</html>

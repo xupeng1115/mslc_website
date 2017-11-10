@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>马上飞扬-我的资料</title>
+<meta name="description" content="马上飞扬计算机技术有限公司是黄浦区金融办重点支持的新型互联网金融公司。公司创新了整合线上线下资源，将理财产品、银行物理网点、银行理财顾问、手机银行置于一体的“马上理财金融信息平台”。">
+<meta name="keywords" content="理财,银行,金融">
+<link href="static/css/common.css" rel="stylesheet">
+<script src="static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="static/js/common.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="header">
+  <div class="content-wrap">
+    <span class="logo"><a href="index.html"><img src="static/images/logo-header.png" alt="logo"></a></span>
+    <div class="user">
+      <p class="head-portrait"><img src="static/images/test1.png"><i><img src="static/images/ie-head.png"></i></p>
+      <p class="txt"><a href="#">个人中心</a></p>
+      <a href="#" class="value">2</a>
+    </div>
+    <div class="city" id="city">
+      <p class="current c-shanghai-c"><span class="txt">上海</span><span class="ico"></span></p>
+      <ul>
+        <li class="c-shanghai-c"><span>上海</span></li>
+        <li class="c-hangzhou-c"><span>杭州</span></li>
+        <li class="c-nanjing-c"><span>南京</span></li>
+        <li class="c-suzhou-c"><span>苏州</span></li>
+        <li class="c-shenzhen-c"><span>深圳</span></li>
+        <li class="c-wenzhou-c"><span>温州</span></li>
+      </ul>
+    </div>
+    <ul class="nav">
+      <li class="index"><a href="index.html">首页</a></li>
+      <li><a href="product-list.html">产品推荐</a></li>
+      <li><a href="novice-finance.html">新手理财</a></li>
+    </ul>
+  </div>
+</div>
+<!--/end header-->
+<div class="main-content p-personal-center">
+  <div class="m-center-tab">
+    <ul class="list clearfix">
+      <li class="s1">
+        <p class="title"><a href="personal-center.html">个人中心首页</a></p>
+        <span class="arrow"></span>
+      </li>
+      <li class="s2">
+        <p class="title">理财中心</p>
+        <span class="arrow"></span>
+        <ul class="sublist">
+          <li><a href="financing-my-reservation.html">我的预约</a></li>
+          <li><a href="financing-my-order.html">我的购买</a></li>
+          <li><a href="financing-my-redeem.html">我的赎回</a></li>
+          <li><a href="financing-my-collection.html">我的收藏</a></li>
+        </ul>
+      </li>
+      <li class="s3 current">
+        <p class="title">账户管理</p>
+        <span class="arrow"></span>
+        <ul class="sublist">
+          <li><a href="account-my-data.html">我的资料</a></li>
+          <li><a href="account-managing-director.html">理财经理</a></li>
+          <li><a href="account-friends.html">财友圈</a></li>
+          <li><a href="account-message.html">消息中心</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!--/end m-conter-tab-->
+  <div class="account-my-data">
+    <div class="content">
+      <div class="head-bar">
+        <div class="head-portrait-box">
+          <p class="head-portrait"><img src="static/images/personal-center/psb.jpg"><i><img src="static/images/ie-head2.png"></i></p>
+          <span class="btn"></span>
+        </div>
+      </div>
+      <div class="my-data" id="myData">
+        <div class="account-title-bar clearfix">
+          <h3>个人资料设置</h3>
+          <p class="tip">我们承诺：您的个人信息用于购买银行理财产品，我们将严格保密！</p>
+          <span class="btn-edit">修改</span>
+        </div>
+        <div class="module-cont data-cont">
+          <form action="">
+            <dl class="clearfix allow dl-nickname">
+              <dt>昵称</dt>
+              <dd class="default">马小杨</dd>
+              <dd class="edit">
+                <input type="text" class="input-data" value="马小杨">
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>手机号码</dt>
+              <dd class="default">183****0000</dd>
+            </dl>
+            <dl class="clearfix important allow dl-name">
+              <dt>真实姓名</dt>
+              <dd class="ico-star">*</dd>
+              <dd class="default">请您务必填写真实有效的信息，便于成功购买</dd>
+              <dd class="edit">
+                <input type="text" class="input-data" placeholder="请您务必填写真实有效的信息，便于成功购买">
+              </dd>
+            </dl>
+            <dl class="clearfix important allow dl-idcard">
+              <dt>身份证号</dt>
+              <dd class="ico-star">*</dd>
+              <dd class="default">请您务必填写真实有效的信息，便于成功购买</dd>
+              <dd class="edit">
+                <input type="text" class="input-data" placeholder="请您务必填写真实有效的信息，便于成功购买">
+              </dd>
+            </dl>
+            <dl class="clearfix allow dl-email">
+              <dt>邮箱</dt>
+              <dd class="default">mukoushou@163.com</dd>
+              <dd class="edit">
+                <input type="text" class="input-data" value="mukoushou@163.com">
+              </dd>
+            </dl>
+            <dl class="clearfix allow dl-city">
+              <dt>常在城市</dt>
+              <dd class="default">安徽省 巢湖市</dd>
+              <dd class="edit">
+                <div class="select-box province">
+                  <p class="current">安徽省</p>
+                  <div class="select-list">
+                    <ul>
+                      <li>安徽省</li>
+                      <li>北京市</li>
+                      <li>上海市</li>
+                      <li>江苏省</li>
+                      <li>浙江省</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select-box city">
+                  <p class="current">巢湖市</p>
+                  <div class="select-list">
+                    <ul>
+                      <li>合肥市</li>
+                      <li>巢湖市</li>
+                    </ul>
+                  </div>
+                </div>
+              </dd>
+            </dl>
+            <dl class="clearfix allow dl-birthday">
+              <dt>生日</dt>
+              <dd class="default">1988-8-12</dd>
+              <dd class="edit">
+                <div class="select-box year">
+                  <p class="current">1988</p>
+                  <div class="select-list">
+                    <ul>
+                      <li>1986</li>
+                      <li>1987</li>
+                      <li>1988</li>
+                      <li>1989</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select-box month">
+                  <p class="current">8</p>
+                  <div class="select-list">
+                    <ul>
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6</li>
+                      <li>7</li>
+                      <li>8</li>
+                      <li>9</li>
+                      <li>10</li>
+                      <li>11</li>
+                      <li>12</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select-box day">
+                  <p class="current">12</p>
+                  <div class="select-list">
+                    <ul>
+                      <li>11</li>
+                      <li>12</li>
+                    </ul>
+                  </div>
+                </div>
+              </dd>
+            </dl>
+            <div class="btn-bar clearfix">
+              <input type="submit" value="保存" class="btn submit">
+              <input type="button" value="取消" class="btn cancel">
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--/ end 资料设置-->
+      <div class="preference" id="preference">
+        <div class="account-title-bar clearfix">
+          <h3>个人理财偏好</h3>
+          <p class="tip">为了让我们更好地为您定制专属您的理财产品，请完善以下信息！</p>
+          <span class="btn-edit">修改</span>
+        </div>
+        <div class="module-cont preference-cont">
+          <form action="">
+            <dl class="clearfix">
+              <dt>我喜爱的银行</dt>
+              <dd class="edit">
+                <p class="current" data-default="1" data-select="1">中国银行</p>
+                <div class="select-list">
+                  <ul>
+                    <li>中国工商银行</li>
+                    <li>中国银行</li>
+                    <li>中国人民银行</li>
+                    <li>中国农业银行</li>
+                    <li>招商银行</li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>我常用的币种</dt>
+              <dd class="edit">
+                <p class="current" data-default="3" data-select="3">中国农业银行</p>
+                <div class="select-list">
+                  <ul>
+                    <li>中国工商银行</li>
+                    <li>中国银行</li>
+                    <li>中国人民银行</li>
+                    <li>中国农业银行</li>
+                    <li>招商银行</li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>理财期限</dt>
+              <dd class="edit">
+                <p class="current" data-default="4" data-select="4">招商银行</p>
+                <div class="select-list">
+                  <ul>
+                    <li>中国工商银行</li>
+                    <li>中国银行</li>
+                    <li>中国人民银行</li>
+                    <li>中国农业银行</li>
+                    <li>招商银行</li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>风险类型</dt>
+              <dd class="edit">
+                <p class="current" data-default="0" data-select="0">中国工商银行</p>
+                <div class="select-list">
+                  <ul>
+                    <li>中国工商银行</li>
+                    <li>中国银行</li>
+                    <li>中国人民银行</li>
+                    <li>中国农业银行</li>
+                    <li>招商银行</li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>风险程度</dt>
+              <dd class="edit">
+                <p class="current" data-default="2" data-select="2">中国人民银行</p>
+                <div class="select-list">
+                  <ul>
+                    <li>中国工商银行</li>
+                    <li>中国银行</li>
+                    <li>中国人民银行</li>
+                    <li>中国农业银行</li>
+                    <li>招商银行</li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+            <div class="btn-bar clearfix">
+              <input type="submit" value="保存" class="btn submit">
+              <input type="button" value="取消" class="btn cancel">
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--/ end 偏好-->
+    </div>
+  </div>
+  <!--/end account-my-data-->
+</div>
+<!--/end main-content-->
+<div class="footer">
+  <div class="content-wrap">
+    <span class="logo"><a href="index.html"><img src="static/images/logo-footer.png" alt="logo"></a></span>
+    <ul class="links">
+      <li class="phone">400-547-4578</li>
+      <li class="about"><a href="#">关于马上理财</a></li>
+      <li class="news"><a href="#">媒体报道</a></li>
+      <li class="recruit"><a href="#">招贤纳士</a></li>
+      <li class="contact"><a href="#">联系我们</a></li>
+    </ul>
+    <ul class="icos">
+      <li><a href="javascript:;" title="微信" class="ico-weixin"></a></li>
+      <li><a href="javascript:;" title="新浪" class="ico-xinlang"></a></li>
+      <li><a href="javascript:;" title="知乎" class="ico-zhihu"></a></li>
+      <li><a href="javascript:;" title="豆瓣" class="ico-douban"></a></li>
+    </ul>
+  </div>
+</div>
+<!--/end footer-->
+<script type="text/javascript">
+
+//资料修改原型
+var SetMyDate = function(element,options){
+  var self = this;
+  this.parent = $(element);
+  this.content  = $(element).find(".module-cont");
+  this.public = {
+    save   : function($element){},
+    cancel : function($element){},
+    extra  : function($element){}
+  }
+  $.extend(this.public,options);
+  
+  this.parent.on("click",".btn-edit",function(){
+    self.myDateEdit();
+  })
+
+  this.parent.on("click",".current",function(){
+    self.myDataSelectShow($(this));
+    return false;
+  })
+
+  this.parent.on("click",".select-item li",function(){
+    self.myDataSelectItem($(this));
+    return false;
+  })
+
+  this.parent.on("click",".submit",function(){
+    self.public.save(self.parent);
+    return false;
+  })
+
+  this.parent.on("click",".cancel",function(){
+    self.public.cancel(self.parent);
+    return false;
+  })
+
+  this.public.extra(this.parent);
+}
+
+
+SetMyDate.prototype = {
+
+  //进入修改状态
+  myDateEdit : function($parent){
+    if(this.content.hasClass('state-edit')){
+      return;
+    }
+
+    this.content.addClass('state-edit');
+  },
+
+  //展开select选项
+  myDataSelectShow : function($element){
+    var self = this;
+    if(!this.content.hasClass('state-edit')){
+      return false;
+    }
+    this.parent.find(".select-item").removeClass('select-item');
+    $element.parent().addClass('select-item');
+    $(document).on("click.myDataSelectShow",function(){
+      self.parent.find(".select-item").removeClass('select-item');
+      $(document).off("click.myDataSelectShow");
+    })
+  },
+
+  //select选择
+  myDataSelectItem : function($element){
+    var $parent = $element.parents(".select-item");
+    var index = $element.index();
+    var $current = $parent.find(".current");
+    $parent.removeClass('select-item');
+    $current.data("select",index);
+    $current.text($element.text());
+  }
+}
+
+</script>
+<script type="text/javascript">
+$(function(){
+  //修改个人资料
+  var mydata = new SetMyDate("#myData",{
+    save : function($element){
+      //表单验证待写...
+      //ajax提交表单返回OK执行下列代码...
+      var txtProvince,txtCity;
+      $element.find(".module-cont").removeClass('state-edit');
+
+      //更新信息
+      $element.find(".allow .input-data").each(function() {
+        var txt = $(this).val();
+        $(this).parents("dl").find(".default").text(txt);
+      });
+      
+      selectUpdate(".dl-city"," ");
+      selectUpdate(".dl-birthday","-");
+
+      function selectUpdate(element,separator){
+        var txtArr = [];
+        $(element).find(".current").each(function(index) {
+          txtArr.push($(this).text());
+        });
+        $(element).find(".default").text(txtArr.join(separator));
+      }
+    },
+    cancel : function($element){
+      var txtArr;
+      $element.find(".module-cont").removeClass('state-edit');
+
+      //还原信息
+      $element.find(".allow .input-data").each(function() {
+        var txt = $(this).parents("dl").find(".default").text();
+        $(this).val(txt);
+      });
+
+      selectRestore(".dl-city");
+      selectRestore(".dl-birthday");
+
+      function selectRestore(element){
+        var txtArr = $(element).find('.default').text().split(/ |-/);
+        $(element).find(".current").each(function(index){
+          $(this).text(txtArr[index])
+        })
+      }
+    },
+    extra : function($element){
+      $element.on("focus blur",".input-data",function(e){
+        if(e.type=="focusin"){
+          $(this).parents("dl").addClass('on');
+        }else if(e.type=="focusout"){
+          $(this).parents("dl").removeClass('on');
+        }
+      })
+    }
+  });
+
+  //修改理财偏好
+  var preference = new SetMyDate("#preference",{
+    save : function($element){
+      //ajax提交表单返回OK执行下列代码...
+      $element.find(".module-cont").removeClass('state-edit');
+      $element.find(".current").each(function(){
+        var index = $(this).data("select");
+        $(this).data("default",index);
+      });
+    },
+    cancel : function($element){
+      $element.find(".module-cont").removeClass('state-edit');
+      $element.find(".current").each(function(){
+        var index = $(this).data("default");
+        var txt = $(this).next().find("li").eq(index).text();
+        $(this).data("select",index);
+        $(this).text(txt);
+      });
+    }
+  });
+
+})
+</script>
+<script type="text/javascript">
+$(function(){
+  //切换城市
+  selectCity("#city",function(currentCity){
+    //参数currentCity为当前选择的城市
+    //alert(currentCity)
+  })
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div id="bankMarquee" class="bank-marquee">
+    <div class="box">
+        <ul>
+            {{#each data}}
+                {{#if exist}}
+                <li data-section="{{this.sectionId}}">
+                    <p class="ico"><span class="space"></span><img src="{{this.smallImageUrl}}" data-default="{{this.smallImageUrl}}" data-hover="{{this.selectedSmallImageUrl}}" /></p>
+                    <p class="txt">{{this.title}}</p>
+                    <span class="arrow"></span>
+                </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    {{#if ctrl}}
+    <div class="ctrl">
+        <p class="next"><i></i></p>
+        <p class="prev"><i></i></p>
+    </div>
+    {{/if}}
+</div>
+
